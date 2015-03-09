@@ -23,6 +23,7 @@ html {
   font-family: 'Gotham A','Gotham B',sans-serif;
   padding-top: 60px;
   text-align: center;
+  line-height: 2em;
 }
 
 #nav_bar {
@@ -37,10 +38,9 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0px;
+   color: #333;
 }
 
-a {
-  color: #333;
-  margin: 10px;
-}
+
+
 
