@@ -18,8 +18,15 @@ html {
   background-color: #f6f6f6;
 }
 
+.blog_link {
+  color: #333;
+  font-family: 'Gotham A','Gotham B',sans-serif;
+  padding-top: 60px;
+  text-align: center;
+}
+
 #nav_bar {
-   color: #333;
+  color: #333;
   font-family: 'Gotham A','Gotham B',sans-serif;
   font-weight: 100;
   font-size: 20px;
