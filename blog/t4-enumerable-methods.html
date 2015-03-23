@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<head>
+  <title>Kelsey Pedersen</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<div class="header">
+  <div class="name">
+  Kelsey Pedersen
+  </div>
+  </div>
+  
+<div id="blog">
+  <div class="title">
+    Week 4
+  </div>
+ 
+  <div class="sub_title">
+    Enumerable Methods
+  </div>
+  
+  <div class="date">
+    March 20th, 2015
+  </div>
+  
+  <div class="content">
+
+
+
+<p>The enunumable method is used in every major collection class in Ruby. Therefore, it's really important to fully understand to enumerable methods. I am going to break it down for you to help you be more proficient in Ruby moving forward. These instance methods include:</p>
+
+<div class="list">
+<i>Boolean Queries: returns true or false</i>
+<li>:all?</li>
+<li>:any?</li>
+<li>:include?</li>
+<li>:none?</li>
+<li>:one?</li>
+</div>
+
+<div class="examples">
+<div class="paragraph_header">Examples</div>
+<p><u>For arrays, you would write the following:</u></p>
+<p>Ex: Is there one, and only one, state with "West" in its name?</p>
+<p>>> states.one? {|state| state =~ /West/ }</p>
+<p>=> true</p>
+<br>
+
+<p>Ex: Does the array include Louisiana?</p>
+<p>>> states.include?("Louisiana")</p>
+<p>=> true</p>
+<br>
+
+<p><u>For hashes, you would write the following:</u></p>
+<p>Ex:1.1: Is there one, and only one, state with "West" in its name?</p>
+<p>>> states.keys.one? {|state| state =~ /West/ }</p>
+<p>=> true</p>
+
+<br>
+
+<p>OR</p>
+
+<br>
+
+<p>Ex1.2: Is there one, and only one, state with "West" in its name?</p>
+<p>>> states.values.one? {|state| state =~ /West/ }</p>
+<p>=> true</p>
+
+<br>
+
+<p>Ex:2.1: Does the array include Louisiana?</p>
+<p>>> states.keys.include?("Louisiana")</p>
+<p>=> true</p>
+<br>
+<p>OR</p>
+<br>
+<p>Ex:2.2: Does the array include Louisiana?</p>
+<p>>> states.values.include?("Louisiana")</p>
+<p>=> true</p></div>
+
+<div class="list">
+<li>:chunk</li>
+<li>:collect</li>
+<li>:collect_concat</li>
+<li>:count</li>
+<li>:cycle</li>
+<li>:detect</li>
+<li>:drop</li>
+<li>:drop_while</li>
+<li>:each_cons</li>
+<li>:each_entry</li>
+<li>:each_slice</li>
+<li>:each_with_index - use if you want to do 1. Array element #1, 2. Array element #2, etc</li>
+<li>:each_with_object</li>
+<li>:entries</li>
+<li>:find</li>
+<li>:find_all</li>
+<li>:find_index</li>
+<li>:first</li>
+<li>:flat_map</li>
+<li>:grep</li>
+<li>:group_by</li>
+<li>:inject</li>
+<li>:lazy</li>
+<li>:map</li>
+<li>:max</li>
+<li>:max_by</li>
+<li>:member?</li>
+<li>:min</li>
+<li>:min_by</li>
+<li>:minmax</li>
+<li>:partition</li>
+<li>:reduce</li>
+<li>:reject</li>
+<li>:reverse_each</li>
+<li>:select</li>
+<li>:slice_before</li>
+<li>:sort</li>
+<li>:sort_by</li>
+<li>:take</li>
+<li>:take_while</li>
+<li>:to_a</li>
+<li>:to_h</li>
+<li>:zop</li>
+</div>
+
+<p>Find more information in Chapter 11 of The Well Grounded Rubiest." More information to come in the next week or two as I explore the use of all these methods!<p>
+
+
+
+
+  </div>
+
+</div>
+  
+  <div id="footer">
+    <ul>
+      <li>
+        <a href="#">Portfolio</a>
+        <a href="#">Blog</a>
+        <a href="#">Github</a>
+        <a href="http://www.kpedersen00.github.io/blog/aboutme.html">About Me</a>
+      </li>
+    </ul>
+  </div>
+<body>
+
+</body>
+</html>
