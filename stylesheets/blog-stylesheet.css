@@ -44,3 +44,8 @@
 .examples {
   padding: 30px;
 }
+
+.list_description {
+  line-height: 10px;
+  padding: 10px;
+}

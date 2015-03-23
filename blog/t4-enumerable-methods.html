@@ -101,7 +101,22 @@
 <li>:first</li>
 <li>:flat_map</li>
 <li>:grep</li>
-<li>:group_by</li>
+
+
+<li><b>:group_by</b></li>
+
+<div class="list_description">
+<p>input: block</p>
+<p>output: hash</p>
+<br>
+<p><u>Example:</u></p>
+<p><i>colors = %w{ red orange yellow green blue purple }</p>
+<p> colors.group_by {|color| color.size }</p>
+<p> => {3 => ["red"], 6 => ["orange", "yellow", "purple"], 5 => ["green"], 4 => ["blue"] }</i></p>
+<br>
+<p>The block "{|color| color.size }" returns an integer for each color. The resulting hash with the color size (key) and color (value).</p></div>
+
+
 <li>:inject</li>
 <li>:lazy</li>
 <li>:map</li>
@@ -111,7 +126,18 @@
 <li>:min</li>
 <li>:min_by</li>
 <li>:minmax</li>
-<li>:partition</li>
+<li><b>:partition</b></li>
+
+<div class="list_description">
+<p>input: array</p>
+<p>output: array of two arrays (aka a partition between two arrays)</p>
+<br>
+<p><u>Example:</u></p>
+
+<p><i>people = 10.step(25,3).map { |i| Person.new(:age => i) }</p>
+<p>teens = people.partition { |person| person.teenager? } </p>
+<p>[[ELEMENT 1 TEENAGER, ELEMENT 2 TEENAGER], [ELEMENT 3 NOT TEENAGER, ELEMENT 4 NOT TEENAGER]]</i></p></div>
+
 <li>:reduce</li>
 <li>:reject</li>
 <li>:reverse_each</li>
