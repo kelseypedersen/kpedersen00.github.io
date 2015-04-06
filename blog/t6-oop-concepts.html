@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+  <title>Kelsey Pedersen</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<div class="header">
+  <div class="name">
+  Kelsey Pedersen
+  </div>
+  </div>
+
+<div id="blog">
+  <div class="title">
+    Week 6
+  </div>
+
+  <div class="sub_title">
+    Variable Scope
+  </div>
+
+  <div class="date">
+    April 5th, 2015
+  </div>
+
+  <div class="content">
+<p>What kinds of variables does Ruby support? Where are they accessible? When would you use them and what makes them different?</p>
+
+<p><b>What is variable scope?</b></p>
+<p>Defines in a program where a variable is accessible. It's declared by using a special character at the start of a variable name as outlined in the table below</p>
+
+<p><u>Name Begins With === Variable Scope</u></p>
+<div class="center">
+<p><b>$</b> <===> Global Variable<br>
+<b>@</b> <===> Instance Variable<br>
+<b>[a-z]</b> or <b>_</b> <===> Local Variable<br>
+<b>[A-Z]</b> <===> Constant<br>
+<b>@@</b> <===> Class Variable</p>
+</div>
+
+<p><u>Determining the variable scope</u></p>
+<p>It's usually fairly easy to understand the variable's scope based on the symbol at the front of the variable. However, sometimes you may need to figure out the variable scope programmatically. To do so, you use the "defined?" method.<p>
+
+<p><i> x = 100 <br>
+defined? x <br>
+=> "local-variable" </i></p>
+
+<p><i> @x = 100 <br>
+defined? x <br>
+=> "instance-variable" </i></p>
+
+<p><u>Global Variables ($)</u></p>
+
+<p>Global Variables are used to create a variable that is accessible anywhere in the Ruby program. The use of global variables is NOT encouraged because since they are visible anywhere in the entire program, they can also be changed anywhere in the program - making debugging more difficult. </p>
+<p><u>Instance Variables (@)</u></p>
+<p>Instance values are local to specific instances of the class. Other objects of the same class have their own local values, which are independent of changes made in other objects.</p>
+<p><u>Local Variables ([a-z])</u></p>
+<p>Local Variables are only used inside the method or loop where it's defined.</p>
+<p><u>Constant ([A-Z])</u></p>
+<p>Constants should not be changed after assigned a value. In Ruby, they can be changed but it is not best practice. Constants declared in a class will only be accessible inside the class. Constants declared outside a class are assigned global scope. </p>
+<p><u>Class Variable (@@)</u></p>
+<p>Class Variables are shared across all instances of the class. There is only one variable value for all objects created from the class. This means that if the value changes in one class, the value changes for all the other object instances.</p>
+
+
+
+  </div>
+
+</div>
+
+  <div id="footer">
+    <ul>
+      <li>
+        <a href="#">Portfolio</a>
+        <a href="#">Blog</a>
+        <a href="#">Github</a>
+        <a href="http://www.kpedersen00.github.io/blog/aboutme.html">About Me</a>
+      </li>
+    </ul>
+  </div>
+<body>
+
+</body>
+</html>
