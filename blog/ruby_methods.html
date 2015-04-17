@@ -1,0 +1,189 @@
+
+<i>Boolean Queries: returns true or false</i>
+
+:all?
+  input: each element of the array
+  returns: true or nil
+
+  example:
+  Does the states array include California?
+  states.keys.any?("California")
+  => true
+
+:any?
+  input: each element of the array
+  returns: true or nil
+
+  Does the states array include Germnay?
+  states.keys.any?("Germany")
+  => nil
+
+:include?
+  input: each element of the array
+  returns: true or nill
+
+  example:
+  Does the states array include Louisiana?
+  states.keys.include?("Louisiana")
+  => true
+
+:none?
+  input: each element of the array
+  returns: true or nil
+
+  example:
+  Does the states array include China?
+  states.keys.none?("China")
+  => true
+
+:one?
+  input: each element of the array
+  returns: true or nil
+
+  example:
+  Does the states array include China?
+  states.keys.one?("China")
+  => nil
+
+:chunk
+  input: each element of the block
+  action: combines the items together based on the return value of the given block. Consecutive items which have the same value are combined.
+  returns: enumerator
+
+:collect (same as .map)
+  input: an array
+  returns: New Array - alters each value based off of code block instructions
+
+:collect_concat (same as .flat_map)
+  input: array
+  returns: New Array - with concated result of running the code block
+
+:count
+  input:
+  returns: Number - the number of items in the enumerator
+
+:cycle
+  input:
+  action: calls the block for each element in the enumerator (will continue forever if the # of times is not specified)
+  returns:
+
+:detect (same as .find)
+  input:
+  returns: An Item - the first item that the block is not false in the enumerable
+  (* an item refers to either an element, value or key depending on if its an array or hash)
+
+:drop
+  input: an array
+  action: drops the first (n) elements from an array
+  returns: altered array
+
+:drop_while
+  input: an array
+  action: drops elements from the array, until (but not including!) when the block returns false or nil
+  returns: altered array
+
+:each_cons
+  input: array
+  action: iterates through the block for each array of consecutive 'n' elements
+  output: altered array
+
+:each_entry
+  input:
+  action: calls each entry
+  returns: Single Value or New Array
+  ** Same as .each when only returning 0, 1 value
+  ** Different than .each when returning more than 1+ value -- .each returns only the first element, .each_entry returns all the values in an array
+
+  example:
+  class Foo
+    include Enumerable
+    def each
+      => yield 1
+      => yield 1, 2
+      => yield
+    end
+  end
+
+  Foo.new.each_entry{|o| p o}
+    # =>
+    1
+    [1, 2]
+    nil
+
+Foo.new.each{|o| p o}
+    # =>
+    1
+    1
+    nil
+
+Foo.new.each{|*o| p o}
+    # =>
+    [1]
+    [1, 2]
+    []
+
+
+:each_slice(n) - iterates
+  input: array
+  output: altered arrays in new slice sizes
+
+  example:
+  (1..10).each_slice(4) { |a| p a}
+  => [1, 2, 3, 4]
+  => [5, 6, 7, 8]
+  => [9, 10]
+
+
+<li>:each_with_index - use if you want to do 1. Array element #1, 2. Array element #2, etc</li>
+<li>:each_with_object</li>
+<li>:entries</li>
+<li>:find</li>
+<li>:find_all</li>
+<li>:find_index</li>
+<li>:first</li>
+<li>:flat_map</li>
+<li>:grep</li>
+
+
+:group_by
+
+input: array
+output: hash
+
+colors = %w{ red orange yellow green blue purple }
+colors.group_by {|color| color.size }
+=> {3 => ["red"], 6 => ["orange", "yellow", "purple"], 5 => ["green"], 4 => ["blue"] }
+
+The block "{|color| color.size }" returns an integer for each color. The resulting hash with the color size (key) and color (value).
+
+
+<li>:inject</li>
+<li>:lazy</li>
+<li>:map</li>
+<li>:max</li>
+<li>:max_by</li>
+<li>:member?</li>
+<li>:min</li>
+<li>:min_by</li>
+<li>:minmax</li>
+<li><b>:partition</b></li>
+
+
+
+<p><i>people = 10.step(25,3).map { |i| Person.new(:age => i) }</p>
+<p>teens = people.partition { |person| person.teenager? } </p>
+<p>[[ELEMENT 1 TEENAGER, ELEMENT 2 TEENAGER], [ELEMENT 3 NOT TEENAGER, ELEMENT 4 NOT TEENAGER]]</i></p></div>
+
+<li>:reduce</li>
+<li>:reject</li>
+<li>:reverse_each</li>
+<li>:select</li>
+<li>:slice_before</li>
+<li>:sort</li>
+<li>:sort_by</li>
+<li>:take</li>
+<li>:take_while</li>
+<li>:to_a</li>
+<li>:to_h</li>
+<li>:zop</li>
+</div>
