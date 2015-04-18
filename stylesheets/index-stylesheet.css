@@ -24,6 +24,11 @@ html {
   padding-top: 60px;
   text-align: center;
   line-height: 2em;
+  column-count: 2;
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+
+}
 }
 
 #nav_bar {
@@ -44,6 +49,7 @@ a {
   color: #333;
   margin: 10px;
 }
+
 
 
 
