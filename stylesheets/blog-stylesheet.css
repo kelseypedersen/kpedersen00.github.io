@@ -56,4 +56,10 @@
   column-count: 2;
 }
 
+.sub_header {
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 1em;
+}
+
 
