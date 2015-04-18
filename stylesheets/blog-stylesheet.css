@@ -1,5 +1,8 @@
 #blog {
- padding: 10%;
+ padding-left: 10%;
+ padding-right: 10%;
+ padding-bottom: 5%;
+ padding-top: 5%;
 }
 
 .content{
@@ -33,7 +36,6 @@
 
 .list {
   line-height: 30px;
-
 }
 
 .paragraph_header {
@@ -62,10 +64,5 @@
   padding-top: 1em;
 }
 
-.main_body {
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-}
 
 

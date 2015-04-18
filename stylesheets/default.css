@@ -30,4 +30,27 @@ ul {
   padding: 40px;
 }
 
+#footer {
+  text-align: center;
+}
 
+.question {
+  font-weight: bold;
+}
+
+.answer {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.infoheader {
+  margin-bottom: 2em;
+  border-style: dashed;
+  padding: 1em;
+}
+
+.techheader {
+  margin-bottom: 2em;
+  border-style: dotted;
+  padding: 1em;
+}
