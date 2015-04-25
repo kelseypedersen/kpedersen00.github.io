@@ -32,6 +32,10 @@ ul {
 
 #footer {
   text-align: center;
+  background-color: #dd4;
+  position: absolute;
+  margin-top: 10em;
+  width: 100%;
 }
 
 .question {
